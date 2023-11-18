@@ -1,0 +1,48 @@
+{
+  "name": "hexlet/code",
+  "bin": [
+    "bin/gendiff"
+  ],
+  "type": "library",
+  "description": "Structure differences finder",
+  "license": "MIT",
+  "scripts": {
+    "test": "phpunit tests"
+  },
+  "autoload": {
+    "psr-4": {
+      "Differ\\Differ\\": "src",
+      "Differ\\Differ\\Tests\\": "tests"
+    },
+    "files": [
+      "src/Differ.php",
+      "src/DiffGenerator/FindDifferences.php",
+      "src/Parsers/JsonParser.php",
+      "src/Parsers/YamlParser.php",
+      "src/Parsers/Factory/ParserFactory.php",
+      "src/Formatters/Factory/FormatterFactory.php",
+      "src/Formatters/StylishFormatter.php",
+      "src/Formatters/PlainFormatter.php",
+      "src/Formatters/JsonFormatter.php",
+      "src/Utils/Stringify.php",
+      "src/Utils/Sort.php"
+    ]
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.6",
+    "phpstan/phpstan-phpunit": "^1.2.2",
+    "phpstan/extension-installer": "^1.2",
+    "symfony/var-dumper": "^6.2.1",
+    "phpunit/phpunit": "^9.5"
+  },
+  "require": {
+    "docopt/docopt": "^1.0",
+    "ext-json": "*",
+    "symfony/yaml": "^5.4"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}
